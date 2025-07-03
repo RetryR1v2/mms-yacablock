@@ -10,6 +10,7 @@ RegisterNetEvent('mms-yacablock:client:ReciveUserGroup',function(Group)
         for h,v in ipairs(Config.AdminGroups) do
             if v.AdminGroup == Group then
                 ImAdmin = true
+                print('ImAdmin')
             end
         end
     end
@@ -149,7 +150,7 @@ RegisterNetEvent('vorp:SelectedCharacter')
 AddEventHandler('vorp:SelectedCharacter', function()
     Citizen.Wait(Config.InitialWaitTime * 1000)
     TriggerServerEvent('mms-yacablock:server:GetPlayerGourp')
-    Citizen.Wait(1000)
+    Citizen.Wait(10000)
     if not ImAdmin then
         CheckYacaStatus()
     end
@@ -160,7 +161,7 @@ if Config.Debug then
     Citizen.CreateThread(function()
     Citizen.Wait(Config.InitialWaitTime * 1000)
     TriggerServerEvent('mms-yacablock:server:GetPlayerGourp')
-    Citizen.Wait(1000)
+    Citizen.Wait(10000)
     if not ImAdmin then
         CheckYacaStatus()
     end
