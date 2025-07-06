@@ -33,6 +33,7 @@ RegisterServerEvent('mms-yacablock:server:dropplayer',function ()
     local src = source
     DropPlayer(src,Config.KickReason)
 end)
+
 RegisterServerEvent('mms-yacablock:server:PlayerDead',function()
     local src = source
     exports['yaca-voice']:setPlayerAliveStatus(src,false)
@@ -40,7 +41,7 @@ end)
 
 RegisterServerEvent('mms-yacablock:server:PlayerAlive',function()
     local src = source
-    exports['yaca-voice']:setPlayerAliveStatus(src,false)
+    exports['yaca-voice']:setPlayerAliveStatus(src,true)
 end)
 
 RegisterServerEvent('mms-yacablock:server:GetPlayerGourp',function()
@@ -49,6 +50,7 @@ RegisterServerEvent('mms-yacablock:server:GetPlayerGourp',function()
     local Group = Character.group
     TriggerClientEvent('mms-yacablock:client:ReciveUserGroup',src,Group)
 end)
+
 --------------------------------------------------------------------------------------------------
 -- start version check
 --------------------------------------------------------------------------------------------------

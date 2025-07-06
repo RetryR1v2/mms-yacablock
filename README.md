@@ -15,6 +15,7 @@
 
 - 1.1.0 Initial Release
 - 1.1.1 Fixed Little Bug
+- 1.1.2 Fixed Bug That yopu cant Speak After Revive
 
 # installation 
 
