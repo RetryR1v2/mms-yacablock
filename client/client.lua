@@ -90,7 +90,7 @@ function CheckYacaStatus()
                 AnimpostfxPlay('skytl_0000_01clear')
                 VORPcore.NotifyTip(Config.JoinYaca, 5000)
             end
-        elseif YacaStatus == 2 then
+        elseif YacaStatus == 'IN_INGAME_CHANNEL' then
             if Config.UsePicture then
                 YacaBlockMenu:Close({})
             else

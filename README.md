@@ -14,6 +14,7 @@
 # Changelog
 
 - 1.1.0 Initial Release
+- 1.1.1 Fixed Little Bug
 
 # installation 
 
